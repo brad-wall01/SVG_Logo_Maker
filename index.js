@@ -22,7 +22,7 @@ inquirer
         },
     ])
     .then((response) => {
-        const generateSVG = Logo(response.shapeColor, response.textColor, response.shape, response.text)
+        const generateSVG = new Logo(response.shapeColor, response.textColor, response.shape, response.text)
 
         fs.writeFile(`../example`, generateSVG, (err) => {
             if (err) {
